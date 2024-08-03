@@ -14,7 +14,7 @@ public class Canvas implements Shape{
     @Override
     public int perimeter() {
         int res = 0;
-        for (int i = 1; i < shapes.length; i++){
+        for (int i = 0; i < shapes.length; i++){
             res += shapes[i].perimeter();
         } 
         return res;
