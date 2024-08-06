@@ -22,4 +22,18 @@ void SquareTest () {
     canvas.addShape(new Square(10));
     assertEquals(250, canvas.square());
 }
+@Test
+void countTest() {
+    Canvas canvas1 = new Canvas();
+    Canvas canvas2 = new Canvas();
+    
+    canvas1.addShape(new Rectangle(5, 5));
+    canvas1.addShape(new Square(4));
+
+    canvas2.addShape(new Square (3));
+    canvas2.addShape(new Square(4));
+    
+    canvas1.addShape(canvas2);
+    assertEquals(5, canvas1.count());
+}
 }
